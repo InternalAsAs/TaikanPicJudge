@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>画像インポート</title>
+</head>
+<body>
+    <h1>大観専用 画像インポートページ</h1>
+    <form method="post" enctype="multipart/form-data" method="post" action="/picprocess">
+        <div id="dragDropArea">
+            <div class="drag-drop-inside">
+                <p class="drag-drop-info">ここにファイルをドロップ</p>
+                <p>または</p>
+                <p class="drag-drop-buttons">
+                    <input id="fileInput" type="file" accept="image/*" value="ファイルを選択" name="photo" onChange="photoPreview(event)">
+                </p>
+                <div id="previewArea"></div>
+            </div>
+        </div>
+        <button type="submit" name="submit" value="登録">画像判定</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
